@@ -11,7 +11,7 @@ It is implemented in Python and tested using `pytest`.
 
 ## ⚙️ Installation & Usage
 ```bash
-git clone [https://github.com/yourusername/Homework3.git](https://github.com/Satyabandi20/homework3)
+git clone [https://github.com/Satyabandi20/homework3.git](https://github.com/Satyabandi20/homework3)
 cd Homework3
 python -m venv venv
 source venv/bin/activate  # Mac/Linux
