@@ -1,7 +1,7 @@
-# 📌 Intermediate Calculator - Homework3
+# 📌 Advanced Calculator - Homework3
 
-This is an **Intermediate Calculator** that extends the basic functionality by implementing **Object-Oriented Programming (OOP)** principles.  
-It introduces a **Calculation class** to encapsulate arithmetic operations and uses **static methods** in the `Calculator` class.
+This is an **Advanced Calculator** that extends the Intermediate Calculator by adding **calculation history management**.  
+It follows **Object-Oriented Programming (OOP)** principles and **SOLID design**, ensuring modular and maintainable code.
 
 ---
 
@@ -10,8 +10,9 @@ It introduces a **Calculation class** to encapsulate arithmetic operations and u
 ✔️ Supports **Addition (+), Subtraction (-), Multiplication (×), and Division (÷)**  
 ✔️ Implements **Encapsulation** with a `Calculation` class  
 ✔️ Uses **Static Methods** in the `Calculator` class  
+✔️ Uses **Class Methods** in the `Calculations` class for history management  
 ✔️ Handles **division by zero** with exception handling  
-✔️ Fully **unit tested using pytest**  
+✔️ Fully **unit tested using pytest** (100% test coverage)  
 ✔️ **Pylint compliant** (Expected score: **7+/10**)  
 ✔️ **Modular Code** following **SOLID & DRY principles**  
 
@@ -30,7 +31,7 @@ cd homework3
 
 ```bash
 python -m venv venv
-source venv/bin/activate 
+source venv/bin/activate
 ```
 
 ### **3️⃣ Install Dependencies**
@@ -38,7 +39,6 @@ source venv/bin/activate
 ```bash
 pip install -r requirements.txt
 ```
-
 ---
 
 ## 🛠️ Running Tests
@@ -51,6 +51,7 @@ pytest --cov=calculator tests/
 
 ✔️ **Expected Output:**  
 ```
+TOTAL                           78      0   100%
 ========================== All tests passed ==========================
 ```
 
@@ -70,9 +71,16 @@ pylint calculator/
 - Encapsulates a **single arithmetic operation**.
 - Stores **two operands**, the **operation**, and the **result**.
 
+### **`Calculations` Class**
+- Uses **class methods** to **store and retrieve past calculations**.
+- Implements **methods for retrieving history, clearing history, and getting the latest calculation**.
+
 ### **`Calculator` Class**
 - Uses **static methods** to perform operations.
-- Calls the `Calculation` class to store and retrieve results.
+- Calls the `Calculations` class to store and retrieve past results.
+
+### **`operations.py`**
+- Defines **basic arithmetic functions** (`add`, `subtract`, `multiply`, `divide`).
 
 ---
 
@@ -83,6 +91,7 @@ pylint calculator/
 ---
 
 ✔️ Ensure **all tests pass**  
+✔️ Ensure **100% test coverage**  
 ✔️ Ensure **Pylint score is 7+/10**  
 🚀 **Ready for submission!**
 
